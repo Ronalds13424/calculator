@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./assets/img/fav.png" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+
+
+    <title>Calculator</title>
+</head>
+<body>
+    
+    <div id="app" v-cloak>
+        <div class="container align-v">
+            <div class="calc-box align-v align-h">
+                <div ref="display" class="header">
+                     <div class="preview">
+                        <span ref="displayPreview">{{preview}}</span>
+                    </div>
+                    <span ref="displayText" style="font-size:50px;">{{calc}}</span>
+                </div>
+                <button @keyup.alt.67="clear" @click="clear()" class="num ac secondary">AC</button>
+                <button @click="addnumber(Math.PI.toString())" class="num secondary">π</button>
+                <button @click="addnumber('(')" class="num secondary">(</button>
+                <button @click="addnumber(')')" class="num secondary">)</button>
+                <button @click="selfoperate('^3')" class="num secondary">x³</button>
+                <button @click="selfoperate('^2')" class="num secondary">x²</button>
+                <button @click="selfoperate('r2')" class="num secondary">√x</button>
+                <button @click="invert()" class="num invert secondary">+/-</button>
+                <button @click="selfoperate('%')" class="num percent secondary">%</button>
+                <button @click="operate('/')" class="num divide">÷</button>
+                <button @click="addnumber('7')" class="num">7</button>
+                <button @click="addnumber('8')" class="num">8</button>
+                <button @click="addnumber('9')" class="num">9</button>
+                <button @click="addnumber('4')" class="num">4</button>
+                <button @click="addnumber('5')" class="num">5</button>
+                <button @click="addnumber('6')" class="num">6</button>
+                <button @click="addnumber('1')" class="num">1</button>
+                <button @click="addnumber('2')" class="num">2</button>
+                <button @click="addnumber('3')" class="num">3</button>
+                <button @click="addnumber('0')" class="num zero">0</button>
+                <button @click="addnumber('.')" class="num">.</button>
+                <button @click="operate('*')" class="num multiply">×</button>
+                <button @click="operate('-')" class="num substract">-</button>
+                <button @click="operate('+')" class="num add">+</button>
+                <button @click="equals()" class="num equal">=</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <span>Made with <i style="color:rgb(255, 0, 0);">&hearts;</i> by <a target="blank" href="https://github.com/Ronalds13424">Ronalds13424</a>.</span>
+    </footer>
+    <script src="app.js"></script>
+
+    </script>
+</body>
+</html>
