@@ -7,6 +7,6 @@ visit : https://ronaldscalc.pages.dev/
 works with keyboard
 
 any issues?
-Contact me on discord : ronalds1398
+Contact me on discord : ronalds1398 !
 
 
